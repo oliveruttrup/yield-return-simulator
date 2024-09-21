@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yield Net Return Simulator</title>
+</head>
+<body>
+    <h1>Yield Net Return Simulator</h1>
+    <form>
+        <label for="purchasePrice">Purchase Price of the Property (€):</label>
+        <input type="number" id="purchasePrice" name="purchasePrice" [(ngModel)]="purchasePrice"><br><br>
+        <label for="monthlyRent">Monthly Rent Amount (€):</label>
+        <input type="number" id="monthlyRent" name="monthlyRent" [(ngModel)]="monthlyRent"><br><br>
+        <label for="annualRentalFee">Annual Rental Fee (€):</label>
+        <input type="number" id="annualRentalFee" name="annualRentalFee" [(ngModel)]="annualRentalFee"><br><br>
+        <button type="button" (click)="calculateResults()">Calculate Results</button>
+    </form>
+    <div *ngIf="showResults">
+        <app-result [results]="results"></app-result>
+    </div>
+</body>
+</html>

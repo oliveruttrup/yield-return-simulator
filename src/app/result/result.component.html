@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Styled Table</title>
+
+</head>
+<body>
+    <h2>Results</h2>
+    <table>
+        <thead>
+            <tr>
+                <th>Year</th>
+                <th>Monthly Net Income (€)</th>
+                <th>Annual Return (%)</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr *ngFor="let result of results">
+                <td>{{ result.year }}</td>
+                <td>€{{ result.monthlyNetIncome }}</td>
+                <td>{{ result.returnPercentage }}%</td>
+            </tr>
+        </tbody>
+    </table>
+</body>
+</html>
